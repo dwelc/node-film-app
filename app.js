@@ -5,7 +5,10 @@ const mongoose = require('mongoose')
 
 const app = express()
 
-mongoose.connect('mongodb://localhost:27017')
+mongoose.connect('mongodb://localhost:27017/films').then(
+    () => {console.log('Connected to MongoDB')},
+    err => {console.log('Failed to connect to MongoDB Server: ' + err.address + ' On Port: ' + err.port)}
+)
 
 app.use(cors())
 
