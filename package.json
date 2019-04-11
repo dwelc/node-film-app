@@ -14,8 +14,8 @@
     "nodemon": "^1.18.11"
   },
   "scripts": {
-    "start": "node app",
-    "dev": "nodemon app"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "Dan Welch",
