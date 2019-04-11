@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const filmSchema = mongoose.Schema({
+const films = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     title: String,
     Year: Number,
@@ -23,4 +23,7 @@ const filmSchema = mongoose.Schema({
     Type: String,
     Response: Boolean,
     Images: Array,
+    totalSeasons: Number,
 })
+
+module.exports = mongoose.model('films', films)

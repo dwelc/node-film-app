@@ -3,14 +3,17 @@ const cors = require('cors')
 const mongodb = require('mongodb')
 const mongoose = require('mongoose')
 
-const app = express()
+const films = require('./api/models/films')
 
-mongoose.connect('mongodb://localhost:27017/films').then(
+const app = express()
+app.use(cors())
+
+mongoose.connect('mongodb://localhost:27017/films', { useNewUrlParser: true}).then(
     () => {console.log('Connected to MongoDB')},
     err => {console.log('Failed to connect to MongoDB Server: ' + err.address + ' On Port: ' + err.port)}
 )
 
-app.use(cors())
+const db = mongoose.connection
 
 app.listen(5000, () => {
     console.log('Server listening on port 5000')
@@ -21,6 +24,19 @@ app.get('/', (req, res) => {
     res.send('Hello this is a response from express!!!')
 })
 
-app.get('/films', (req, res) => {
-
+app.get('/films', (req, res) => {    
+    films.find()
+    .then(films => {
+        res.json({
+            confirmation: 'success',
+            data: films
+        })
+    })
+    .catch(err => {
+        res.json({
+            confirmation: 'fail',
+            message: err.message
+        })
+        console.log(err)
+    })
 })
