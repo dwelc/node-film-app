@@ -17,14 +17,14 @@ router.get('/', (req, res) => {
     })
 })
 
-// Enter Film into the database
+// Enter New Film into the database
 router.post('/', (req, res) => {
     const newFilm = new films({
-
         Title: req.body.Title
     })
-
-    newFilm.save().then(films => res.json(films))
+    newFilm
+    .save()
+    .then(films => res.json(films))
 })
 
 module.exports = router
