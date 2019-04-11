@@ -20,3 +20,8 @@ app.listen(5000, () => {
 })
 
 app.use('/films', filmr)
+
+app.get('/', (req, res) => {
+    res.send('Hello from Express')
+    console.log('Hello')
+})
