@@ -5,9 +5,10 @@ const bodyParser = require('body-parser')
 
 const films = require('./api/models/films')
 const filmr = require('./api/routes/films')
+const filmsSlimr = require('./api/routes/films-slim')
 
 const app = express()
-app.use(cors())
+//app.use(cors())
 app.use(bodyParser.json())
 
 mongoose.connect('mongodb://localhost:27017/films', { useNewUrlParser: true}).then(
@@ -20,6 +21,7 @@ app.listen(5000, () => {
 })
 
 app.use('/films', filmr)
+app.use('/filmsslim', filmsSlimr)
 
 app.get('/', (req, res) => {
     res.send('Hello from Express')

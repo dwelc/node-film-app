@@ -1,2 +1,19 @@
+.list-group {
+    display: grid;
+}
 
+.list-group-item {
+    display: grid;
+    border: 10px;
+}
 
+@media (min-width: 500px) {
+    .list-group {
+        grid-template-columns: 1fr 1fr 1fr;
+    
+    }
+    .list-group-item {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
