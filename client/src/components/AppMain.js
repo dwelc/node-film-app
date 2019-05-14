@@ -4,19 +4,14 @@ import { NavLink } from 'react-router-dom'
 
 
 class AppMain extends Component {
-    state = {films: []}
+    state = {
+        films: []
+    }
 
     componentDidMount() {
         fetch('/filmsslim')
         .then( res => res.json())
         .then(films => this.setState({ films }))
-    }
-
-    imageclick = () => {
-        console.log('Image Clicked!')
-        let id = this.films._id
-        console.log(id)
-        this.props.history.push('/film-details')
     }
 
     render() {
