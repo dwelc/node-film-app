@@ -43,3 +43,59 @@ h1 {
     padding: 2em;
     margin-bottom:  2em;
 }
+
+/* AppFilm.js */
+
+.detail-poster {
+    padding-left: 1.2em;
+    height: 600px;
+    width : 450px;
+    float: left;
+    display: inline-flexbox;
+    margin-right: 4em;
+}
+
+.active-film__title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.6em;
+    font-size: 3rem;
+}
+
+.active-film__info {
+    margin: 1em;
+    display: inline-flexbox;
+    float: left;
+    width: 65%;
+}
+
+.active-film__details{
+    font-weight: 700;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+    padding-right: 10em;
+}
+
+.active-film__details span{
+    font-weight: 400;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+    color: rgb(61, 61, 61);
+}
+
+.active-film__details_plot{
+    font-weight: 700;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+    padding-right: 10em;
+}
+
+.active-film__details_plot span{
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+    padding-right: 10em;
+    color: rgb(61, 61, 61);
+
+}
