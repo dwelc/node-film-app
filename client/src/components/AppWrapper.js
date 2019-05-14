@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import AppNavbar from './components/AppNavBar'
-import AppMain from './components/AppMain'
+import AppNavbar from './AppNavBar'
+import AppMain from './AppMain'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
+import './AppWrapper.css';
 
-class App extends Component {
+class AppWrapper extends Component {
   render() {
     return (
       <div className="App">
@@ -16,4 +16,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AppWrapper;
