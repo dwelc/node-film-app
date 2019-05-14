@@ -13,11 +13,16 @@ class AppMain extends Component {
         return (
             <div className='AppMain'>
                 <h1>Films</h1>
-                <ul className ="list-group">
+                <div className ="film-view">
                     {this.state.films.map(films =>
-                        <li className="list-group-item" key={films.Title}>{films.Title}</li>
+                        <figure className='filmContainer'>
+                            <div className="film-item" key={films.Title} > 
+                                <img src = { films.Poster } className='film-img'></img> 
+                            <div className='Title'>{films.Title}</div>
+                            </div>
+                         </figure>
                     )}
-                </ul>
+                </div>
             </div>
         )
     }
