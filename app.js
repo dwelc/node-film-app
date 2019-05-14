@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const films = require('./api/models/films')
 const filmr = require('./api/routes/films')
 const filmsSlimr = require('./api/routes/films-slim')
+const filmdetails = require('./api/routes/film-details')
 
 const app = express()
 //app.use(cors())
@@ -22,6 +23,7 @@ app.listen(5000, () => {
 
 app.use('/films', filmr)
 app.use('/filmsslim', filmsSlimr)
+app.use('/film-details', filmdetails)
 
 app.get('/', (req, res) => {
     res.send('Hello from Express')

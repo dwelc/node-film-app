@@ -6,11 +6,10 @@ const films = require('../models/films')
 
 //Return Title and Poster URL of a film
 router.get('/', (req, res) => {
+    const filmid = req.param('id')
     films.find({
-        Type: 'movie',
+        _id: filmid,
     })
-    .select('Title Poster')
-    .sort({Title : 1})
     .then(films => {
         res.json(films)
     })
