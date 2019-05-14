@@ -16,7 +16,7 @@ class AppWrapper extends Component {
           <AppNavbar />
           <Switch>
             <Route exact path='/' component={AppMain} />
-            <Route path='/film-details' component={AppFilm} />
+            <Route path='/film-details/:id' component={AppFilm} />
           </Switch>
           </div>
         </BrowserRouter>
