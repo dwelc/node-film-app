@@ -1,11 +1,11 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-class AppFilm extends Component {
-    render() {
-        return (
-            <h1>Film Component Works</h1>
-        )
-    }
+const AppFilm = () => {
+    return (
+        <div>
+            <p>Film Details Are Here!</p>
+        </div>
+    )
 }
 
 export default AppFilm

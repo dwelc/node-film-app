@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {
+import { NavLink} from 'react-router-dom'
+{/*import {
     Collapse,
     Navbar,
     NavbarToggler,
@@ -8,7 +9,7 @@ import {
     NavItem,
     NavLink,
     Container
-} from 'reactstrap'
+} from 'reactstrap'*/}
 
 class AppNavBar extends Component {
     state = {
@@ -23,7 +24,10 @@ class AppNavBar extends Component {
     render() {
         return(
         <div>
-            <Navbar color="dark" dark expand="sm" className="mb-5">
+            <NavLink to='film-details'>Film Details </NavLink>
+            <NavLink to='/'>Home </NavLink>   
+
+{/*}            <Navbar color="dark" dark expand="sm" className="mb-5">
                 <Container>
                     <NavbarBrand href="/">Dan's Video Shop</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
@@ -35,7 +39,7 @@ class AppNavBar extends Component {
                         </Nav>
                     </Collapse>
                 </Container>
-            </Navbar>
+        </Navbar>*/}
         </div>
         )
     }
