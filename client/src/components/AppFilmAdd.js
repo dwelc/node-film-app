@@ -22,17 +22,26 @@ class AppFilmAdd extends React.Component {
       }
     
       handleSubmit(event) {
-        let data = this.state
+        const {title, director, year, genre, runtime, country, imdbrating, plot} = this.state
+        alert(`Title Is ${title} Country Is ${country} Release is ${year}`)
         fetch("/films",
             {
                 method: "POST",
                 cache: "no-cache",
                 headers:{
-                    "content_type": "application/json"
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify({ "Title": title,
+                                        "Director": director,
+                                        "Year": year,
+                                        "Genre": genre,
+                                        "Runtime": runtime,
+                                        "Country": country,
+                                        "imdbRating": imdbrating,
+                                        "Plot": plot,
+                                        "Type": "movie"
+                 })
             })
-            .then (console.log(data))
             .then(response=> response.json())
       }
 
@@ -47,8 +56,12 @@ class AppFilmAdd extends React.Component {
                         <input className='form__input' type="text" name='title' value={this.state.title} onChange={this.handleInputChange} />
                     </label>
                     <label className='form__label'>
+                        Director:
+                        <input className='form__input' type="text" name='director' value={this.state.director} onChange={this.handleInputChange} />
+                    </label>
+                    <label className='form__label'>
                         Release Year:
-                        <input className='form__input' type="text" name='release' value={this.state.release} onChange={this.handleInputChange} />
+                        <input className='form__input' type="text" name='year' value={this.state.year} onChange={this.handleInputChange} />
                     </label>
                     <label className='form__label'>
                         Genre:
