@@ -2,6 +2,8 @@ Node Film App
 
 # Installation
 
-## Install Mongodb
+## Dependencies
+Install Mongodb:
 https://www.mongodb.com/download-center/community
 
+Leave the default port (27017) specified
