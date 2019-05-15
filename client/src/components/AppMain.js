@@ -1,5 +1,7 @@
 import React, {Component } from 'react';
 import { NavLink } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
+
 
 
 
@@ -14,10 +16,17 @@ class AppMain extends Component {
         .then(films => this.setState({ films }))
     }
 
+
+
     render() {
         return (
             <div className='AppMain'>
+                <div className='film-view__top'>
                 <h1>Films</h1>
+                <NavLink to='/film-add'>
+                <button className='film-add__button'>Add Film</button>
+                </NavLink>
+                </div>
                 <div className ="film-view">
                     {this.state.films.map(films =>
                         <figure className='filmContainer' key={films._id}>

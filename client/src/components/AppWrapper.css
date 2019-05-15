@@ -21,12 +21,29 @@
 
 h1 {
     padding-left: 1.1em;
+    float: left;
+    display: inline;
+}
+
+.film-add__button {
+    float: right;
+    margin-right: 7em;
+    margin-top: 0.1em;
+    padding: 0.6rem 1.4rem;
+    border-radius: 10px;
+    border-width: 4px;
+}
+
+.film-view__top {
+    display: inline-block;
+    width: 100%;
 }
 
 .film-view {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
+    
 }
 
 .film-item {
@@ -103,4 +120,41 @@ h1 {
     padding-right: 10em;
     color: rgb(61, 61, 61);
     text-transform: capitalize;
+}
+
+/* AppFilmAdd.js */
+
+.form__input {
+    display: block;
+    justify-content: center;
+    width: 200%;
+}
+.form__label {
+    display: block;
+    
+}
+
+.form__wrapper {
+    display: block;
+    text-align: center;
+    
+}
+
+form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 30%;
+    text-align: left;
+    text-size-adjust: 400%;
+}
+
+.submit__button{
+    display: inline-block;
+    border-radius: 3px;
+    margin-top: 24px;
+}
+
+.film-add__banner{
+    display: inline-block;
+    width: 100%;
 }
