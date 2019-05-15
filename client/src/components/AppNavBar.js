@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import logo from '../assets/logo_180_circ_only.png'
+
 import {
     Collapse,
     Navbar,
@@ -25,7 +27,8 @@ class AppNavBar extends Component {
         <div>
             <Navbar color="dark" dark expand="sm" className="mb-5">
                 <Container>
-                    <NavbarBrand href="/">Dan's Video Shop</NavbarBrand>
+                    <img src ={logo} className='logo'/>
+                    <NavbarBrand href="/">New Relic Video Shop</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>

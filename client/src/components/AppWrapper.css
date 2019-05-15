@@ -5,6 +5,12 @@
     font-size: 1em;
 }
 
+.logo {
+    height: 30px;
+    width: 34px;
+    margin-right: 10px;
+}
+
 @media (min-width: 600px) {
     .film-view {
         display: grid;
@@ -51,7 +57,6 @@ h1 {
     height: 600px;
     width : 450px;
     float: left;
-    display: inline-flexbox;
     margin-right: 4em;
 }
 
@@ -64,30 +69,30 @@ h1 {
 
 .active-film__info {
     margin: 1em;
-    display: inline-flexbox;
-    float: left;
-    width: 65%;
 }
 
 .active-film__details{
     font-weight: 700;
     margin-bottom: 1em;
     letter-spacing: 1px;
-    padding-right: 10em;
+    text-transform: uppercase;
+    columns: 2;
 }
 
 .active-film__details span{
     font-weight: 400;
+    text-transform: capitalize;
     margin-bottom: 1em;
     letter-spacing: 1px;
     color: rgb(61, 61, 61);
+    margin-left: 0.3em;
 }
 
 .active-film__details_plot{
     font-weight: 700;
     margin-bottom: 1em;
     letter-spacing: 1px;
-    padding-right: 10em;
+    text-transform: uppercase;
 }
 
 .active-film__details_plot span{
@@ -97,5 +102,5 @@ h1 {
     letter-spacing: 1px;
     padding-right: 10em;
     color: rgb(61, 61, 61);
-
+    text-transform: capitalize;
 }

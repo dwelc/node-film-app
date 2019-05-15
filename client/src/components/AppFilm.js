@@ -42,7 +42,7 @@ class AppFilm extends React.Component {
                 IMDb Rating: <span>{film.imdbRating}</span>
             </h3>
             <h3 className='active-film__details_plot'>
-                Plot: <span>{film.Plot}</span>
+                Plot: <span>`"{film.Plot}"`</span>
             </h3>
             </div>
             </div>
