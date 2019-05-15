@@ -1,4 +1,3 @@
-Node Film App
 # Description
 This is intended as a dummy application for React/Node.js training purposes.
 
