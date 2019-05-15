@@ -56,3 +56,7 @@ https://nodejs.org/en/download/
 
 6. Check to make sure the application appears in the New Relic browser section
 
+7. Use a Browser Session Trace to determine if any duplicate calls are being made. React gives you the ability to transfer and reuse data between components, rather than making repeated API calls to the same resource.
+
+8. 
+
